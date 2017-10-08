@@ -10,8 +10,9 @@ Note: 'message' below must be in hex format.  You may first write a message in t
  <br>
 <form action="https://core.rock7.com/rockblock/MT" method="post">
   <div>
-    <label for="data">message:</label>
-    <input name="data" id="say" value="hallo">
+    <label for="data">message (270 char max):<br> </label>
+    <!--<input name="data" id="say" value="hallo" size="270">-->
+    <textarea name="data" id="say" cols="90" rows="3"></textarea>
     
   </div>
   <div>
@@ -28,7 +29,7 @@ Note: 'message' below must be in hex format.  You may first write a message in t
   </div>
   
   <div>
-    <button>Send my greetings</button>
+    <button>Send</button>
   </div>
 </form>
 
