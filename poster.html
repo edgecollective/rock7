@@ -1,0 +1,69 @@
+<html>
+
+
+Note: 'message' below must be in hex format.  You may first write a message in the 'message' field below, and then click on the 'convert' button to convert string to ascii. 
+</br>
+
+ <button onclick="convert_message_to_ascii();">Convert</button>
+ 
+ <br>
+ <br>
+<form action="https://core.rock7.com/rockblock/MT" method="post">
+  <div>
+    <label for="data">message:</label>
+    <input name="data" id="say" value="hallo">
+    
+  </div>
+  <div>
+    <label for="imei">IMEI #:</label>
+    <input name="imei" value='300234065358380'>
+  </div>
+  <div>
+    <label for="username">username:</label>
+    <input name="username" value="donblair@gmail.com">
+  </div>
+   <div>
+    <label for="password">password:</label>
+    <input name="password" value="[password]">
+  </div>
+  
+  <div>
+    <button>Send my greetings</button>
+  </div>
+</form>
+
+ 
+ 
+
+<script>
+
+function convert_message_to_ascii()
+{
+
+var x=document.getElementById("say").value;
+//var hex = ascii_to_hexa(x);
+document.getElementById("say").value=ascii_to_hexa(x);
+
+}
+
+
+function ascii_to_hexa(str)
+  {
+	var arr1 = [];
+	for (var n = 0, l = str.length; n < l; n ++) 
+     {
+		var hex = Number(str.charCodeAt(n)).toString(16);
+		arr1.push(hex);
+	 }
+	return arr1.join('');
+   }
+   
+   var results;
+   var x=document.getElementById("say").value;
+   
+   console.log(x);
+   console.log(ascii_to_hexa('hallo'));
+   
+   </script>
+   
+</html>
